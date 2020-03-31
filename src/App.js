@@ -1,12 +1,21 @@
 import React from "react"
-import { Link } from 'react-router-dom'
+import { Link, Switch, Route } from 'react-router-dom'
+import './App.css'
 
-function App() {  
-    
+function App() {
+
     return (
         <div>
-            <Link to='/'>Home</Link>
-            <Link to='/about'>About</Link>
+            <nav>
+                <ul>
+                    <li><Link to='/'>Home</Link></li>
+                    <li><Link to='/about'>About</Link></li>
+                </ul>
+            </nav>
+
+            <Switch>
+
+            </Switch>
         </div>
     )
 }
