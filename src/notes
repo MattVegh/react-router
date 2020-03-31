@@ -1,0 +1,14 @@
+https://reacttraining.com/react-router/web/guides/quick-start
+
+Conditionally render large parts of your page
+
+Declarative API
+
+Primay Components:
+
+    Routers: <BrowserRouter>, <HashRouter>
+
+    Router Matchers: <Route>, <Switch>
+
+    Navigation ('route changers'): <Link>, <NavLink>, <Redirect>
+
