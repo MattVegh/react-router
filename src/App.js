@@ -14,7 +14,8 @@ function App() {
             </nav>
 
             <Switch>
-
+                <Route exact path='/' render={() => <h1>Home Page</h1>} />
+                <Route path='/about' render={() => <h1>About Page</h1>} />
             </Switch>
         </div>
     )
