@@ -4,6 +4,8 @@ Conditionally render large parts of your page
 
 Declarative API
 
+Hooks: useHistory, useLocation, useParams
+
 Primay Components:
 
     Routers: <BrowserRouter>, <HashRouter>
