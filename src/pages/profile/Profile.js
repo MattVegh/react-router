@@ -1,5 +1,5 @@
 import React from "react"
-import {Link, Switch, Route} from "react-router-dom"
+import { Link, Switch, Route } from "react-router-dom"
 
 import Settings from "./Settings"
 import Info from "./Info"
@@ -8,12 +8,18 @@ function Profile() {
     return (
         <div>
             <h1>Profile Page</h1>
-            <ul>
+            {/* <ul>
                 <li><Link to="/profile/info">Profile Info</Link></li>
                 <li><Link to="/profile/settings">Profile Settings</Link></li>
-            </ul>
+            </ul> */}
 
             <Switch>
+                <Route exact path='/profile'>
+                    <ul>
+                        <li><Link to="/profile/info">Profile Info</Link></li>
+                        <li><Link to="/profile/settings">Profile Settings</Link></li>
+                    </ul>
+                </Route>
                 <Route path='/profile/settings'>
                     <Settings />
                 </Route>
