@@ -1,5 +1,5 @@
 import React from "react"
-import {Link} from "react-router-dom"
+import {Link, Switch, Route} from "react-router-dom"
 
 import Settings from "./Settings"
 import Info from "./Info"
@@ -12,6 +12,16 @@ function Profile() {
                 <li><Link to="/profile/info">Profile Info</Link></li>
                 <li><Link to="/profile/settings">Profile Settings</Link></li>
             </ul>
+
+            <Switch>
+                <Route path='/profile/settings'>
+                    <Settings />
+                </Route>
+
+                <Route path='/profile/info'>
+                    <Info />
+                </Route>
+            </Switch>
         </div>
     )
 }
