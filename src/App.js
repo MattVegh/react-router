@@ -3,6 +3,7 @@ import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Home from "./pages/Home"
 import Profile from "./pages/profile/Profile"
+import './App.css'
 
 import {Switch, Route} from "react-router-dom"
 
