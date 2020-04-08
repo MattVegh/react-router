@@ -20,15 +20,15 @@ function Profile() {
             <Switch>
                 <Route exact path='/profile'>
                     <ul>
-                        <li><Link to="/profile/info">Profile Info</Link></li>
-                        <li><Link to="/profile/settings">Profile Settings</Link></li>
+                        <li><Link to={`${url}/info`}>Profile Info</Link></li>
+                        <li><Link to={`${url}/settings`}>Profile Settings</Link></li>
                     </ul>
                 </Route>
-                <Route path='/profile/settings'>
+                <Route path={`${path}/settings`}>
                     <Settings />
                 </Route>
 
-                <Route path='/profile/info'>
+                <Route path={`${path}/info`}>
                     <Info />
                 </Route>
             </Switch>
