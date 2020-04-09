@@ -1,9 +1,10 @@
 import React from "react"
 import serviceData from './ServicesData'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 function ServicesList() {
-    
+
+    const location = useLocation()
     const services = serviceData.map(service => (
         <div key={service._id}>
             <h3><Link to={`/services/${service._id}`}>{service.name}</Link> ${service.price}</h3>
