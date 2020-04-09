@@ -6,11 +6,11 @@ import servicesData from './ServicesData'
 function ServiceDetail(props) {
     const { serviceId } = useParams()
     const history = useHistory()
-    console.log(history)
+    
     const thisService = servicesData.find(service => service._id === serviceId)
 
     function handleClick() {
-
+            history.push("/services")
     }
 
     return (
