@@ -13,22 +13,12 @@ function App() {
 
     return (
         <div>
-            >
-            <Header />
+            {/* <Header />
             
             <Switch>
-                {/* <Route exact path="/">
-                    <Home />
-                </Route> */}
-
                 <Route exact path="/">
-                    <h1>Home page, anyone is allowed here</h1>
+                    <Home />
                 </Route>
-                <Route path="/private">
-                    <h1>Protected page, must be logged in to be here</h1>
-                </Route>
-
-
                 <Route path="/profile">
                     <Profile/>
                 </Route>
@@ -40,7 +30,19 @@ function App() {
                 </Route>
             </Switch>
             
-            <Footer />
+            <Footer /> */}
+
+            <Link to="/">Home</Link>
+            <Link to="/private">Private</Link>
+
+            <Switch>
+                <Route exact path="/">
+                    <h1>Home page, anyone is allowed here</h1>
+                </Route>
+                <Route path="/private">
+                    <h1>Protected page, must be logged in to be here</h1>
+                </Route>
+            </Switch>
         </div>
     )
 }
