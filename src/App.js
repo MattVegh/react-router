@@ -42,10 +42,10 @@ function App() {
                     <h1>Home page, anyone is allowed here</h1>
                 </Route>
                 <Route path="/private">
-                {
+                    {
                         isLoggedIn ?
-                        <h1>Protected page, must be logged in to be here</h1> :
-                        <Redirect to="/" />
+                            <h1>Protected page, must be logged in to be here</h1> :
+                            <Redirect to="/login" />
                     }
                 </Route>
             </Switch>
