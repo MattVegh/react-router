@@ -7,19 +7,28 @@ import ServicesList from "./pages/services/ServicesList"
 import ServiceDetail from "./pages/services/ServiceDetail"
 import './App.css'
 
-import { Switch, Route, Redirect } from "react-router-dom"
+import { Link, Switch, Route, Redirect } from "react-router-dom"
 
 function App() {
 
     return (
         <div>
-            <Redirect to='/whatwhat' />
+            >
             <Header />
             
             <Switch>
-                <Route exact path="/">
+                {/* <Route exact path="/">
                     <Home />
+                </Route> */}
+
+                <Route exact path="/">
+                    <h1>Home page, anyone is allowed here</h1>
                 </Route>
+                <Route path="/private">
+                    <h1>Protected page, must be logged in to be here</h1>
+                </Route>
+
+
                 <Route path="/profile">
                     <Profile/>
                 </Route>
