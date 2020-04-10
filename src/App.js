@@ -7,13 +7,13 @@ import ServicesList from "./pages/services/ServicesList"
 import ServiceDetail from "./pages/services/ServiceDetail"
 import './App.css'
 
-import {Switch, Route} from "react-router-dom"
+import { Switch, Route, Redirect } from "react-router-dom"
 
 function App() {
 
     return (
         <div>
-
+            <Redirect to='/whatwhat' />
             <Header />
             
             <Switch>
