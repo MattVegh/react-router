@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import Header from "./components/Header"
 import Footer from "./components/Footer"
 import Home from "./pages/Home"
@@ -10,6 +10,8 @@ import './App.css'
 import { Link, Switch, Route, Redirect } from "react-router-dom"
 
 function App() {
+    const [isLoggedIn, setIsLoggedIn] = useState(false)
+
 
     return (
         <div>
@@ -40,7 +42,11 @@ function App() {
                     <h1>Home page, anyone is allowed here</h1>
                 </Route>
                 <Route path="/private">
-                    <h1>Protected page, must be logged in to be here</h1>
+                {
+                        isLoggedIn ?
+                        <h1>Protected page, must be logged in to be here</h1> :
+                        <Redirect to="/" />
+                    }
                 </Route>
             </Switch>
         </div>
