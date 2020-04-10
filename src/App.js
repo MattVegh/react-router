@@ -48,6 +48,10 @@ function App() {
                             <Redirect to="/login" />
                     }
                 </Route>
+                <Route path="/login">
+                    <button onClick={() => setIsLoggedIn(true)}>Log in</button>
+                </Route>
+
             </Switch>
         </div>
     )
