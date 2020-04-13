@@ -1,12 +1,13 @@
 import React from "react"
+import { Link } from 'react-router-dom'
 import productsData from './productsData'
 
 function Products() {
 
     const products = productsData.map(product => 
         <div key={product.id}>
-            <h3>{product.name} - ${product.price}</h3>
-            <p>{product.description}</p>
+            <h3><Link to={`/products/${product.id}`}>{product.name}</Link> - ${product.price}</h3>
+            
         </div>)
 
     return (
