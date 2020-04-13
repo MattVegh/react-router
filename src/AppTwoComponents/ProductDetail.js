@@ -4,16 +4,15 @@ import productsData from './productsData'
 
 function ProductDetail() {
     const { productId } = useParams()
-    console.log(productId)
     const history = useHistory()
 
     const thisProduct = productsData.find(product => product.id === productId)
 
-    console.log(thisProduct)
     return (
         <div>
-            <h2>Product Detail Page</h2>
-            <h3></h3>
+            <h2>{thisProduct.name}</h2>
+            <h3>${thisProduct.price}</h3>
+            <p>{thisProduct.description}</p>
         </div>
     )
 }
