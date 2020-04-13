@@ -2,13 +2,14 @@ import React from "react"
 import { useParams, useHistory } from 'react-router-dom'
 import productsData from './productsData'
 
-function ProductsDetail() {
+function ProductDetail() {
     const { productId } = useParams()
+    console.log(productId)
     const history = useHistory()
 
     const thisProduct = productsData.find(product => product.id === productId)
 
-    console.log(productId, thisProduct)
+    console.log(thisProduct)
     return (
         <div>
             <h2>Product Detail Page</h2>
@@ -17,4 +18,4 @@ function ProductsDetail() {
     )
 }
 
-export default ProductsDetail
+export default ProductDetail

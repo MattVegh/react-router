@@ -2,7 +2,7 @@ import React from "react"
 import { Route, Link, Switch } from 'react-router-dom'
 import Home from './AppTwoComponents/Home'
 import Products from './AppTwoComponents/Products'
-import ProductsDetail from './AppTwoComponents/ProductDetail'
+import ProductDetail from './AppTwoComponents/ProductDetail'
 
 function App() {
     return (
@@ -21,8 +21,8 @@ function App() {
                     <Products />
                 </Route>
 
-                <Route path='/products/:productsId'>
-                    <ProductsDetail />
+                <Route path='/products/:productId'>
+                    <ProductDetail />
                 </Route>
             </Switch>
 
