@@ -3,7 +3,7 @@ import { Route, Link } from 'react-router-dom'
 import Home from './AppTwoComponents/Home'
 import Products from './AppTwoComponents/Products'
 
-function App() {    
+function App() {
     return (
         <div>
             <nav>
@@ -11,13 +11,15 @@ function App() {
                 <Link to='/products'>Products</Link>
             </nav>
 
-            <Route exact path='/'>
-                <Home />
-            </Route>
+            <Switch>
+                <Route exact path='/'>
+                    <Home />
+                </Route>
 
-            <Route path='/products'>
-                <Products />
-            </Route>
+                <Route path='/products'>
+                    <Products />
+                </Route>
+            </Switch>
             {/*
                 Route between 2 components depending on the path:
                 1. Home page ("/")
@@ -29,7 +31,7 @@ function App() {
                 ** Products Page **
                 • Using an array of data for your products (provided for you), map over that data to show each item and some information on the products page as a list of available products.
             */}
-            
+
         </div>
     )
 }
